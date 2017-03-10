@@ -1,0 +1,13 @@
+C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\bin\Debug\1LAB_3VAR.exe.config
+C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\bin\Debug\1LAB_3VAR.exe
+C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\bin\Debug\1LAB_3VAR.pdb
+C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\obj\Debug\MainWindow.g.cs
+C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\obj\Debug\App.g.cs
+C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\obj\Debug\1LAB_3VAR_MarkupCompile.cache
+C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\obj\Debug\1LAB_3VAR_MarkupCompile.lref
+C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\obj\Debug\MainWindow.baml
+C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\obj\Debug\1LAB_3VAR.g.resources
+C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\obj\Debug\_1LAB_3VAR.Properties.Resources.resources
+C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\obj\Debug\1LAB_3VAR.csproj.GenerateResource.Cache
+C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\obj\Debug\1LAB_3VAR.exe
+C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\obj\Debug\1LAB_3VAR.pdb
