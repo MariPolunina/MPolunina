@@ -11,3 +11,4 @@ C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\obj\Debug\_1LAB
 C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\obj\Debug\1LAB_3VAR.csproj.GenerateResource.Cache
 C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\obj\Debug\1LAB_3VAR.exe
 C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\obj\Debug\1LAB_3VAR.pdb
+C:\Users\Марина\Source\Repos\MPolunina\1LAB_3VAR\1LAB_3VAR\obj\Debug\1LAB_3VAR.csprojResolveAssemblyReference.cache
