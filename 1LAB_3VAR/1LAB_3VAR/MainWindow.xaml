@@ -8,11 +8,11 @@
         Title="PoluGame Регистрация" Height="400" Width="550">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="525"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock FontSize="24" Text="Создание персонажа" TextAlignment="Center"/>
         <Grid Grid.Row="1">
@@ -27,9 +27,10 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"></ColumnDefinition>
                     <ColumnDefinition Width="3*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
                 <TextBlock Text="Никнейм" FontSize="16" ></TextBlock>
                 <TextBox Grid.Column="1"></TextBox>
             </Grid>
