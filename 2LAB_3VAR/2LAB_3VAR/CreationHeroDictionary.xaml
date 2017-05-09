@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:_2LAB_3VAR">
+    <local:CreationHeroValidationRule x:Key="validationNick"></local:CreationHeroValidationRule>
+    <local:MainWindowViewModel x:Key="Hero"></local:MainWindowViewModel>
+    <Image x:Key="Sven" Source="sven.jpg"></Image>
+    <Image x:Key="Wizard" Source="wizard.jpg"></Image>
+    <Image x:Key="Thief" Source="thief.jpeg"></Image>
+    <Image x:Key="Priest" Source="priest.jpg"></Image>
+    <Image x:Key="Archer" Source="archer.jpg"></Image>
+    <Image x:Key="Palladin" Source="palladin.jpg"></Image>
+    <Image x:Key="All" Source="All.jpg"></Image>
+    <local:ImageConverter x:Key="IConverter"></local:ImageConverter>
+</ResourceDictionary>

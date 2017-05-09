@@ -1,0 +1,118 @@
+﻿<Window x:Class="_2LAB_3VAR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2LAB_3VAR"
+        mc:Ignorable="d"
+          Title="PoluGame Регистрация" Height="400" Width="550">
+    <Window.DataContext>
+        <local:MainWindowViewModel></local:MainWindowViewModel>
+    </Window.DataContext>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="CreationHeroDictionary.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="24" Text="Создание персонажа" TextAlignment="Center"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="30*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="8*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Никнейм" FontSize="16" ></TextBlock>
+                    <TextBox Grid.Column="1" >
+                    <Binding Path="nickname">
+                        <Binding.ValidationRules>
+                            <local:CreationHeroValidationRule></local:CreationHeroValidationRule>
+                        </Binding.ValidationRules>
+                    </Binding>
+                    </TextBox>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="4*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Image  Grid.Column="1" Source="{Binding SelectedHeroClass,Converter={StaticResource ResourceKey=IConverter},UpdateSourceTrigger=PropertyChanged}" Margin="10,10,10,10" ></Image>
+                    <Button Grid.Column="0" Grid.Row="1" Width="180" Height="30" Content="Создать персонажа" FontSize="16" Command="{Binding Creationhero}" CommandParameter="{Binding}"></Button>
+                    <Button Grid.Column="1" Grid.Row="1" Width="180" Height="30" Content="Отмена" FontSize="16"></Button>
+                    <Grid Grid.Column="0" Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="6*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Класс" FontSize="16"></TextBlock>
+                            <ComboBox Grid.Column="1" Margin="0,4,0,0" ItemsSource="{Binding HeroClass}" SelectedItem="{Binding SelectedHeroClass}">
+                            </ComboBox>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3.3*"></RowDefinition>
+                                <RowDefinition Height="1*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"></RowDefinition>
+                                    <RowDefinition Height="1*"></RowDefinition>
+                                    <RowDefinition Height="1*"></RowDefinition>
+                                    <RowDefinition Height="1*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4.7*"></ColumnDefinition>
+                                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Grid.Row="0" Text="Сила"  VerticalAlignment="Center" ></TextBlock>
+                                <TextBlock Grid.Column="0" Grid.Row="1" Text="Ловкость" VerticalAlignment="Center"></TextBlock>
+                                <TextBlock Grid.Column="0" Grid.Row="2" Text="Интеллект" VerticalAlignment="Center"></TextBlock>
+                                <TextBlock Grid.Column="0" Grid.Row="3" Text="Удача" VerticalAlignment="Center"></TextBlock>
+                                <local:Plus_Minus Grid.Column="1" Grid.Row="0" Point="{Binding Source={StaticResource ResourceKey=Hero}, Path=_force, Mode=TwoWay}" Freepoints="{Binding Source={StaticResource Hero}, Path=_freePoint, Mode=TwoWay}"></local:Plus_Minus>
+                                <local:Plus_Minus Grid.Column="1" Grid.Row="1" Point="{Binding Source={StaticResource ResourceKey=Hero}, Path=_adroitness, Mode=TwoWay}" Freepoints="{Binding Source={StaticResource Hero}, Path=_freePoint, Mode=TwoWay}" ></local:Plus_Minus>
+                                <local:Plus_Minus Grid.Column="1" Grid.Row="2" Point="{Binding Source={StaticResource ResourceKey=Hero}, Path=_intellingence, Mode=TwoWay}" Freepoints="{Binding Source={StaticResource Hero}, Path=_freePoint, Mode=TwoWay}"></local:Plus_Minus>
+                                <local:Plus_Minus Grid.Column="1" Grid.Row="3" Point="{Binding Source={StaticResource ResourceKey=Hero}, Path=_luck, Mode=TwoWay}" Freepoints="{Binding Source={StaticResource Hero}, Path=_freePoint, Mode=TwoWay}"></local:Plus_Minus>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="18*"></ColumnDefinition>
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Свободные очки" VerticalAlignment="Center"></TextBlock>
+                                <TextBlock Text="{Binding _freePoint, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" VerticalAlignment="Center"></TextBlock>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
