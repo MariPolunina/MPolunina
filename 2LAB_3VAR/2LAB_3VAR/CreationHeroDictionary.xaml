@@ -10,5 +10,30 @@
     <Image x:Key="Archer" Source="archer.jpg"></Image>
     <Image x:Key="Palladin" Source="palladin.jpg"></Image>
     <Image x:Key="All" Source="All.jpg"></Image>
+    <Image x:Key="Back" Source="Back.jpg"></Image>
+    <ImageBrush x:Key="BackR" ImageSource="Back.jpg"></ImageBrush>
     <local:ImageConverter x:Key="IConverter"></local:ImageConverter>
+    <Style x:Key="ButtonStyle" TargetType="Button">
+        <Setter Property="FontSize" Value="24"></Setter>
+        <Setter Property="FontFamily" Value="Gabriola"></Setter>
+        <Setter Property="Background" Value="Gray"></Setter>
+        <Setter Property="Foreground" Value="White"></Setter>
+        <Setter Property="BorderBrush" Value="Gray"></Setter>
+    </Style>
+    <Style x:Key="TextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Gabriola"></Setter>
+        <Setter Property="FontSize" Value="24"></Setter>
+        <Setter Property="Foreground" Value="Black"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+    </Style>
+    <Style BasedOn="{StaticResource TextStyle}" x:Key="NewTextStyle" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+      
+    </Style>
+    <Style x:Key="Article" TargetType="TextBlock">
+        <Setter Property="TextAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="32"></Setter>
+        <Setter Property="FontFamily" Value="Gabriola"></Setter>
+        <Setter Property="Background" Value="Gray"></Setter>
+    </Style>
 </ResourceDictionary>
