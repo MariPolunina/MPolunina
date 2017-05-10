@@ -28,10 +28,58 @@ namespace _2LAB_3VAR
                 
         }
         private String _SelectedHeroClass;
-        public int _force { get; set; }
-        public int _adroitness { get; set; }
-        public int _intellingence { get; set; }
-        public int _luck { get; set; }
+        public int _force
+        {
+            get
+            {
+                return force;
+            }
+            set
+            {
+                force = value;
+                DoProperty("_force");
+            }
+        }
+        private int force;
+        public int _adroitness
+        {
+            get
+            {
+                return adroitness;
+            }
+            set
+            {
+                adroitness = value;
+                DoProperty("_adroitness");
+            }
+        }
+        private int adroitness;
+        public int _intellingence
+        {
+            get
+            {
+                return intellingence;
+            }
+            set
+            {
+                intellingence = value;
+                DoProperty("_intellingence");
+            }
+                }
+        private int intellingence;
+        public int _luck
+        {
+            get
+            {
+                return luck;
+            }
+            set
+            {
+                luck = value;
+                DoProperty("_luck");
+            }
+        }
+        private int luck;
         private int freePoint;
         public int _freePoint
         {
@@ -42,7 +90,6 @@ namespace _2LAB_3VAR
             set
             {
                 freePoint = value;
-                DoProperty("freePoint");
                 DoProperty("_freePoint");
             }
         }
