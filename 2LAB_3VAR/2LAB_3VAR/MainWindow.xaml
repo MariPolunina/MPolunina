@@ -108,7 +108,7 @@
                                     <ColumnDefinition Width="60*"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="Свободные очки" Style="{StaticResource NewTextStyle}" Height="31" Margin="16,8,17,8" Width="124"></TextBlock>
-                                <TextBlock Text="{Binding FreePoints, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" VerticalAlignment="Center" Height="16" Margin="0,16,0,15" HorizontalAlignment="Right" Width="60"></TextBlock>
+                                <TextBlock Text="{Binding Source={StaticResource Hero},Path=FreePoints, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" VerticalAlignment="Center" Height="16" Margin="0,16,0,15" HorizontalAlignment="Right" Width="60"></TextBlock>
                             </Grid>
                         </Grid>
                     </Grid>
