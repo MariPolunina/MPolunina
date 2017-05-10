@@ -23,58 +23,71 @@ namespace _2LAB_3VAR
     public partial class Plus_Minus : UserControl, INotifyPropertyChanged
     {
         public static DependencyProperty ValueFreePoints = DependencyProperty.Register("Freepoints", typeof(int), typeof(Plus_Minus));
-        public int Freepoints
+        public static DependencyProperty ValueProperty =
+           DependencyProperty.Register("Value", typeof(byte), typeof(Plus_Minus));
+        public byte Value
         {
             get
             {
-                return (int)GetValue(ValueFreePoints);
+                return (byte)GetValue(ValueProperty);
             }
+
             set
             {
-                SetValue(ValueFreePoints, value);
-                DoProperty("Freepoints");
+                SetValue(ValueProperty, value);
+                DoPropertyChanged("Value");
             }
         }
-        public int Point
+
+        public static DependencyProperty PointsProperty =
+            DependencyProperty.Register("Points", typeof(byte), typeof(Plus_Minus));
+
+        public byte Points
         {
             get
             {
-                return (int)GetValue(Value);
+                return (byte)GetValue(PointsProperty);
             }
+
             set
             {
-                SetValue(Value, value);
-                DoProperty("Point");
+                SetValue(PointsProperty, value);
+                DoPropertyChanged("Points");
             }
         }
-        public event PropertyChangedEventHandler PropertyChanged;
-        public static DependencyProperty Value = DependencyProperty.Register("Point", typeof(int), typeof(Plus_Minus));
-        private void Plus(object o, RoutedEventArgs e)
+
+        private void MinusClick(object sender, RoutedEventArgs e)
         {
-          if (Freepoints >0)
+            if (Value > 5)
             {
-                Point++;
-               Freepoints--;
-           }
-        }
-        private void Minus(object o, RoutedEventArgs e)
-        {
-            if ((Freepoints < 10)&&(Point>5))
-            {
-                Point--;
-                Freepoints++;
+                Value--;
+                Points++;
             }
         }
-        public void DoProperty(string name)
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(name));
-        }
+
         public Plus_Minus()
         {
             InitializeComponent();
-            DataContext = this;    
+            DataContext = this;
         }
-      
+
+        private void PlusClick(object sender, RoutedEventArgs e)
+        {
+            if (Points > 0)
+            {
+                Value++;
+                Points--;
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void DoPropertyChanged(string name)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+            }
+        }
+
     }
 }

@@ -85,7 +85,7 @@ namespace _2LAB_3VAR
         }
         private int luck;
         private int freePoint;
-        public int _freePoint
+        public int FreePoints
         {
             get
             {
@@ -95,7 +95,7 @@ namespace _2LAB_3VAR
             {
                 freePoint = value;
                 DoProperty("freePoint");
-                DoProperty("_freePoint");
+                DoProperty("FreePoints");
             }
         }
         public ICommand Creationhero { get; set; }
@@ -118,7 +118,7 @@ namespace _2LAB_3VAR
                 "Лучник"
             };
             _force =_intellingence=_adroitness=_luck= 5;
-           _freePoint = 10;
+            FreePoints = 10;
             Creationhero = new CreationHero();     
         }
     }

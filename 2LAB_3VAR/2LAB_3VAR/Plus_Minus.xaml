@@ -12,8 +12,8 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button Content="-" Click="Minus"></Button>
-        <TextBlock Grid.Column="1" Text="{Binding Point}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-        <Button Grid.Column="2" Content="+" Click="Plus"></Button>
+        <Button Content="-" Click="MinusClick"></Button>
+        <TextBlock Grid.Column="1" Text="{Binding Value}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Button Grid.Column="2" Content="+" Click="PlusClick"></Button>
     </Grid>
 </UserControl>
