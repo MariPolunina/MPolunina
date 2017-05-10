@@ -42,7 +42,7 @@
                         <ColumnDefinition Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="Никнейм" Style="{StaticResource TextStyle}" Background="LightGray" ></TextBlock>
-                    <TextBox Grid.Column="1" >
+                    <TextBox Grid.Column="1" FontSize="18">
                         <Binding Path="nickname">
                             <Binding.ValidationRules>
                                 <local:CreationHeroValidationRule></local:CreationHeroValidationRule>
@@ -73,7 +73,7 @@
                                 <ColumnDefinition Width="1*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <TextBlock Text="Класс" Style="{StaticResource TextStyle}"></TextBlock>
-                            <ComboBox Grid.Column="1" Margin="0,4,0,0" ItemsSource="{Binding HeroClass}" SelectedItem="{Binding SelectedHeroClass}">
+                            <ComboBox Grid.Column="1" Margin="0,4,0,0" FontSize="16" ItemsSource="{Binding HeroClass}" SelectedItem="{Binding SelectedHeroClass}">
                             </ComboBox>
                         </Grid >
                         <Grid Grid.Row="1" >
