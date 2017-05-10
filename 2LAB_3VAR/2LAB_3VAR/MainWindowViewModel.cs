@@ -37,6 +37,7 @@ namespace _2LAB_3VAR
             set
             {
                 force = value;
+                DoProperty("force");
                 DoProperty("_force");
             }
         }
@@ -50,6 +51,7 @@ namespace _2LAB_3VAR
             set
             {
                 adroitness = value;
+                DoProperty("adroitness");
                 DoProperty("_adroitness");
             }
         }
@@ -63,6 +65,7 @@ namespace _2LAB_3VAR
             set
             {
                 intellingence = value;
+                DoProperty("intellingence");
                 DoProperty("_intellingence");
             }
                 }
@@ -76,6 +79,7 @@ namespace _2LAB_3VAR
             set
             {
                 luck = value;
+                DoProperty("luck");
                 DoProperty("_luck");
             }
         }
@@ -90,6 +94,7 @@ namespace _2LAB_3VAR
             set
             {
                 freePoint = value;
+                DoProperty("freePoint");
                 DoProperty("_freePoint");
             }
         }
