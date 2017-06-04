@@ -16,6 +16,7 @@ namespace _2LAB_3VAR
         }
         public void Execute(object parameter)
         {
+            MainWindowViewModel.InsertDataBase();
         }
         public event EventHandler CanExecuteChanged;
 

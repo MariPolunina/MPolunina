@@ -12,7 +12,7 @@ namespace _2LAB_3VAR
 {
     public class MainWindowViewModel:INotifyPropertyChanged
     {
-        public string nickname { get; set; }
+        public static string nickname { get; set; }
         public List<string> HeroClass { get; set; }
         public String SelectedHeroClass
         {
@@ -27,7 +27,7 @@ namespace _2LAB_3VAR
             }
                 
         }
-        private String _SelectedHeroClass;
+        private static String _SelectedHeroClass;
         public int _force
         {
             get
@@ -41,7 +41,7 @@ namespace _2LAB_3VAR
                 DoProperty("_force");
             }
         }
-        private int force;
+        private static int force;
         public int _adroitness
         {
             get
@@ -55,7 +55,7 @@ namespace _2LAB_3VAR
                 DoProperty("_adroitness");
             }
         }
-        private int adroitness;
+        private static int adroitness;
         public int _intellingence
         {
             get
@@ -69,7 +69,7 @@ namespace _2LAB_3VAR
                 DoProperty("_intellingence");
             }
                 }
-        private int intellingence;
+        private static int intellingence;
         public int _luck
         {
             get
@@ -83,7 +83,7 @@ namespace _2LAB_3VAR
                 DoProperty("_luck");
             }
         }
-        private int luck;
+        private static int luck;
         private int freePoint;
         public int FreePoints
         {
@@ -104,6 +104,13 @@ namespace _2LAB_3VAR
         {
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
+        }
+        public static void InsertDataBase()
+        {
+            TableHero Hero1 = new TableHero(nickname, _SelectedHeroClass, force, intellingence, adroitness, luck);
+            heroDataBaseEntities Context = new heroDataBaseEntities();
+            Context.TableHero.Add(Hero1);
+            Context.SaveChangesAsync();
         }
 
         public MainWindowViewModel()

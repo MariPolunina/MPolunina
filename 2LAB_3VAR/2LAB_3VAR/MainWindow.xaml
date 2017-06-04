@@ -97,7 +97,7 @@
                                 <TextBlock Grid.Column="0" Grid.Row="2" Text="Интеллект"  Style="{StaticResource NewTextStyle}"></TextBlock>
                                 <TextBlock Grid.Column="0" Grid.Row="3" Text="Удача"  Style="{StaticResource NewTextStyle}"></TextBlock>
                                 <local:Plus_Minus Value="{Binding Source={StaticResource Hero} , Path=_force, Mode=TwoWay}" Points="{Binding Source={StaticResource Hero} , Path=FreePoints, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" Margin="0,1,0,1"></local:Plus_Minus>
-                                <local:Plus_Minus Value="{Binding Source={StaticResource Hero} , Path=_adroitness, Mode=TwoWay}" Points="{Binding Source={StaticResource Hero} , Path=FreePoints, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" Margin="0,0,0,1"></local:Plus_Minus>
+                                <local:Plus_Minus Value="{Binding Source={StaticResource Hero} , Path=_adroitness, Mode=TwoWay}" Points="{Binding Source={StaticResource Hero} , Path=FreePoints, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" Margin="0,0,0,1" ></local:Plus_Minus>
                                 <local:Plus_Minus Value="{Binding Source={StaticResource Hero} , Path=_intellingence, Mode=TwoWay}" Points="{Binding Source={StaticResource Hero} , Path=FreePoints, Mode=TwoWay}" Grid.Column="1" Grid.Row="2"  Margin="0,0,0,1"></local:Plus_Minus>
                                 <local:Plus_Minus Value="{Binding Source={StaticResource Hero} , Path=_luck, Mode=TwoWay}" Points="{Binding Source={StaticResource Hero} , Path=FreePoints, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" Margin="0,0,0,1"></local:Plus_Minus>
                             </Grid>
